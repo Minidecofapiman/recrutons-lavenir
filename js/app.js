@@ -1,4 +1,4 @@
-var pathServer = "https://back-nj.piman-consultants.fr/";
+var pathServer = "http://127.0.0.1:8000/api/";
 
 
 var app = angular.module('appSample', ['ui.router'

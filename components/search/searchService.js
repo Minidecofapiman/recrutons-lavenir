@@ -9,3 +9,4 @@ app.service('SearchService', function($http) {
    };
 
 });
+

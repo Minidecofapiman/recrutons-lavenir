@@ -6,23 +6,23 @@ app.controller('searchCtrl', function($rootScope, $scope, $location, $window, $h
 
         console.log('init est appelee')
 
-        // SearchService.getAllCandidats().success(function(data){
-        //     // recuperer le json pour l'afficher
-        //     $scope.allCandidats = ...
-        // });
+        SearchService.getAllCandidats().success(function(data){
+            $scope.allCandidats = data;
+        });
 
-        $scope.allCandidats = [
-            {
-                nom    : 'nom1',
-                prenom : 'prenom1',
-                email  : 'email1',
-            },
-            {
-                nom    : 'nom2',
-                prenom : 'prenom2',
-                email  : 'email2'
-            }
-        ]
+
+        // $scope.allCandidats = [
+        //     {
+        //         nom    : 'nom1',
+        //         prenom : 'prenom1',
+        //         email  : 'email1',
+        //     },
+        //     {
+        //         nom    : 'nom2',
+        //         prenom : 'prenom2',
+        //         email  : 'email2'
+        //     }
+        // ]
 
         
 
