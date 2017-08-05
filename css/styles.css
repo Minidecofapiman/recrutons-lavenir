@@ -1,0 +1,138 @@
+
+ body {
+
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* font-weight: 400; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+
+}
+    /* LOGIN */
+   #login {
+        padding-top: 80px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top : 0px;
+        left: 0px;
+        background-color: #F7F7F7;
+    }
+    #login .form-control{
+          border-radius: 5px;
+          color: #fff;
+    }
+
+    .btn{
+      background-color: #8f106e;
+      border: #8f106e;
+    }
+    .btn:hover{
+      background-color: #8f106e;
+      border: #8f106e;
+    }
+    .h1_perso_login{
+      color: grey;
+    }
+    .hr_perso_login{
+      border: 2 border-style #8f106e;
+    }
+
+
+
+
+      /* NAVBAR */
+
+a,b {
+  color: white;
+}
+.navbar-nav {
+    margin: 0;
+}
+.main-header .navbar-custom-menu,
+.main-header .navbar-right {
+  float: right;
+}
+.navbar-static-top{
+  background-color : #8f106e;
+  color: white;
+}
+.navbar-nav > .user-menu .user-image {
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+.margin-font-awsome{
+    margin-right: 5px;
+}
+.container-perso-search{
+    background-color: white;
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: -1px 1px 13px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 1px 13px -5px rgba(0,0,0,0.75);
+box-shadow: -1px 1px 13px -5px rgba(0,0,0,0.75);
+}
+
+.form-control-bis {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 95%;
+    margin-bottom: 0;
+    border-style: none;
+    border-left: 90px;
+}
+.form-control:hover{
+    border-style: none;
+}
+
+.contentPageBC .input-group-addon {
+    background-color: transparent;
+}
+.input-group-addon {
+    background-color: transparent;
+    border-color: rgba(197,214,222,.7);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8f106e;
+    border: 0;
+    width: 10px;
+    float: right;
+    z-index: 4;
+}
+.bc-icon {
+    background-color: transparent;
+    font-size: 29px;
+    padding: 6px 30px;
+    color: grey;
+    cursor: pointer;
+}
+
+.checkbox{width:50px}
+.inline {
+display: inline-block;
+}
+label {
+min-width: 120px;
+}
+.titleprghp {
+background:#555;
+height: 46px;
+color: #000;
+font-size: 23px;
+height: 46px;
+line-height: 40px;
+padding: 0 0 0 20px;
+margin: 20px 0 20px;
+opacity: 0.8;
+}
+
+.text-white{
+    color:white;
+}
