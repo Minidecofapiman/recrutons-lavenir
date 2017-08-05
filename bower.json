@@ -8,7 +8,9 @@
   "license": "MIT",
   "homepage": "",
   "dependencies": {
-    "angular-ui-calendar": "^1.0.2",
-    "angular-bootstrap-colorpicker": "^3.0.25"
+    "angular": "^1.6.5",
+    "angular-ui-router": "^1.0.5",
+    "font-awesome": "^4.7.0",
+    "bootstrap": "^3.3.7"
   }
 }
