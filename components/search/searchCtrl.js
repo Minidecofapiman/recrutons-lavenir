@@ -8,6 +8,7 @@ app.controller('searchCtrl', function($rootScope, $scope, $location, $window, $h
 
         // SearchService.getAllCandidats().success(function(data){
         //     // recuperer le json pour l'afficher
+        //     $scope.allCandidats = ...
         // });
 
         $scope.allCandidats = [
