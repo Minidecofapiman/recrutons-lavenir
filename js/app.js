@@ -1,81 +1,53 @@
 var pathServer = "https://back-nj.piman-consultants.fr/";
+
+
 var app = angular.module('appSample', ['ui.router'
                           ]);
+
 app.run(function($rootScope, $http, $location, $state) {
-  $rootScope.previousState;
-  $rootScope.currentState;
+
   $rootScope.$on('$stateChangeSuccess', function(ev, to, toParams, from, fromParams) {
       $rootScope.previousState = from.name;
       $rootScope.currentState = to.name;
   });
-  $rootScope.checkLogin = function (){
-      $http.get(pathServer+"checkLogin?sessionId="+localStorage.getItem("sessionId")).success(function (data){
-          if(data.return.code == true){
-            $rootScope.userProfil = JSON.parse(localStorage.getItem("userInfo"));
-            if(data.result != undefined ){
-              localStorage.setItem("sessionId" , data.result.sessionId);
-              localStorage.setItem("userInfo" , JSON.stringify(data.result) );
-              $rootScope.userProfil = data.result;
-              if( $rootScope.userProfil.id == 1 || $rootScope.userProfil.id == 12 ){
-                $rootScope.userAdmin = true;
-              }else{
-                $rootScope.userAdmin = false;
-              }
-              if( $rootScope.userProfil.id == 1 || $rootScope.userProfil.id == 12 || $rootScope.userProfil.id == 42){
-                  $rootScope.NSISVIJPL = true;
-              }else{
-                  $rootScope.NSISVIJPL = false;
-              }
-              if( $rootScope.userProfil.id_droits_user == 1 || $rootScope.userProfil.id_droits_user == 2 ){
-                $rootScope.userDBU = true;
-              }else{
-                $rootScope.userDBU = false;
-              }
-              // $analytics.setCustomVariable(1, 'nom' , data.result.prenom+' '+data.result.nom, 'visit');
-              // $analytics.setUsername(data.result.code+' '+data.result.prenom+' '+data.result.nom);
-            }
-          }else{
-              localStorage.clear();
-              $location.path('login');
-          }
-      });
-  };
-  // $rootScope.checkLogin();
+
 });
+
+
 app.config(function($stateProvider, $urlRouterProvider) {
-  // For any unmatched url, redirect to /state1
+
  $urlRouterProvider.otherwise("/login");
-  $stateProvider
-    .state('login', {
-      url: "/login",
-      templateUrl: "pages/login.html",
-      controller: "loginCtrl"
-    })
-    .state('home', {
-      url: "/home",
-      templateUrl: "pages/home.html",
-      controller: "homeCtrl"
-    })
-    .state('search', {
-      url: "/search",
-      templateUrl: "pages/search.html",
-      controller: "homeCtrl"
-    })
-    .state('candidatProfil', {
-      url: "/candidatProfil",
-      templateUrl: "pages/candidatProfil.html",
-      controller: "homeCtrl"
-    })
-    .state('questions', {
-      url: "/questions",
-      templateUrl: "pages/questions.html",
-      controller: "homeCtrl"
-    })
-    .state('monprofil', {
-      url: "/monprofil",
-      templateUrl: "pages/userprofil.html",
-      controller: "homeCtrl"
-    })
+    $stateProvider
+      .state('login', {
+        url: "/login",
+        templateUrl: "components/login/login.html",
+        controller: "loginCtrl"
+      })
+      .state('home', {
+        url: "/home",
+        templateUrl: "components/home/home.html",
+        controller: "homeCtrl"
+      })
+      .state('search', {
+        url: "/search",
+        templateUrl: "pages/search.html",
+        controller: "homeCtrl"
+      })
+      .state('candidatProfil', {
+        url: "/candidatProfil",
+        templateUrl: "pages/candidatProfil.html",
+        controller: "homeCtrl"
+      })
+      .state('questions', {
+        url: "/questions",
+        templateUrl: "pages/questions.html",
+        controller: "homeCtrl"
+      })
+      .state('monprofil', {
+        url: "/monprofil",
+        templateUrl: "pages/userprofil.html",
+        controller: "homeCtrl"
+      })
 });
 
 
