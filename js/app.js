@@ -16,8 +16,9 @@ app.run(function($rootScope, $http, $location, $state) {
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
- $urlRouterProvider.otherwise("/login");
-    $stateProvider
+  $urlRouterProvider.otherwise("/login");
+
+  $stateProvider
       .state('login', {
         url: "/login",
         templateUrl: "components/login/login.html",
