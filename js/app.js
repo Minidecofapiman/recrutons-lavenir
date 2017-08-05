@@ -30,23 +30,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
       })
       .state('search', {
         url: "/search",
-        templateUrl: "pages/search.html",
-        controller: "homeCtrl"
+        templateUrl: "components/search/search.html",
+        controller: "searchCtrl"
       })
       .state('candidatProfil', {
         url: "/candidatProfil",
-        templateUrl: "pages/candidatProfil.html",
-        controller: "homeCtrl"
+        templateUrl: "components/candidatProfil/candidatProfil.html",
+        controller: "candidatProfilCtrl"
       })
       .state('questions', {
         url: "/questions",
-        templateUrl: "pages/questions.html",
-        controller: "homeCtrl"
+        templateUrl: "components/questionnaire/questions.html",
+        controller: "questionsCtrl"
       })
       .state('monprofil', {
         url: "/monprofil",
-        templateUrl: "pages/userprofil.html",
-        controller: "homeCtrl"
+        templateUrl: "components/userProfil/userprofil.html",
+        controller: "profilCtrl"
       })
 });
 
