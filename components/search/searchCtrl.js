@@ -6,25 +6,9 @@ app.controller('searchCtrl', function($rootScope, $scope, $location, $window, $h
 
         console.log('init est appelee')
 
-        SearchService.getAllCandidats().success(function(data){
-            $scope.allCandidats = data;
+        SearchService.getAllCandidats().then(function(response){
+            $scope.allCandidats = response.data;
         });
-
-
-        // $scope.allCandidats = [
-        //     {
-        //         nom    : 'nom1',
-        //         prenom : 'prenom1',
-        //         email  : 'email1',
-        //     },
-        //     {
-        //         nom    : 'nom2',
-        //         prenom : 'prenom2',
-        //         email  : 'email2'
-        //     }
-        // ]
-
-        
 
     }
     init()

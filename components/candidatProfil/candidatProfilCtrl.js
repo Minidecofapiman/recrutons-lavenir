@@ -1,4 +1,4 @@
-app.controller('candidatProfilCtrl', function($rootScope, $scope, $location, $window, $http, $state){
+app.controller('candidatProfilCtrl', function($rootScope, $scope, $location, $window, $http, $state, SearchService){
     
     console.log('candidatProfilCtrl')
 
@@ -8,10 +8,12 @@ app.controller('candidatProfilCtrl', function($rootScope, $scope, $location, $wi
     init()
 
     $scope.enregistrerCandidat = function(){
+
         console.log($scope.newCandidat)
-        // CandidatService.addCandidat().success(function(data){
-        //     // OK 
-        // });
+
+        SearchService.addCandidat($scope.newCandidat).then(function(response){
+            console.log('insertion OK')
+        });
     }
 
 });
